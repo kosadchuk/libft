@@ -6,7 +6,7 @@
 /*   By: kosadchu <kosadchu@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 12:45:54 by kosadchu          #+#    #+#             */
-/*   Updated: 2019/04/08 16:13:57 by kosadchu         ###   ########.fr       */
+/*   Updated: 2019/04/08 19:49:58 by kosadchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# include "ft_printf/ft_printf.h"
 
 typedef struct		s_list
 {
@@ -87,5 +88,6 @@ int					ft_sqrt(int nb);
 void				ft_free_array(char **c);
 int					ft_lenint(__int128_t n);
 char				*ft_itoa_bs_pf(__int128_t d, uintmax_t u, int base);
+int					ft_printf(const char *f, ...);
 
 #endif
