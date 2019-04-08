@@ -6,7 +6,7 @@
 /*   By: kosadchu <kosadchu@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 12:45:54 by kosadchu          #+#    #+#             */
-/*   Updated: 2019/02/15 19:16:04 by kosadchu         ###   ########.fr       */
+/*   Updated: 2019/04/08 16:13:57 by kosadchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
-int					ft_atoi(const char *str);
+__int128_t			ft_atoi(const char *str);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strnew(size_t size);
@@ -85,6 +85,7 @@ int					ft_words_num(char const *s, char c);
 void				ft_swap(int *a, int *b);
 int					ft_sqrt(int nb);
 void				ft_free_array(char **c);
-int					ft_lenint(int n);
+int					ft_lenint(__int128_t n);
+char				*ft_itoa_bs_pf(__int128_t d, uintmax_t u, int base);
 
 #endif

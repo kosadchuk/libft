@@ -6,13 +6,13 @@
 /*   By: kosadchu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 19:52:35 by kosadchu          #+#    #+#             */
-/*   Updated: 2018/11/20 20:14:05 by kosadchu         ###   ########.fr       */
+/*   Updated: 2019/04/08 16:16:45 by kosadchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lenint(int n)
+int		ft_lenint(__int128_t n)
 {
 	int		len;
 
