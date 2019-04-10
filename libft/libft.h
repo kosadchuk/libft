@@ -6,7 +6,7 @@
 /*   By: kosadchu <kosadchu@student.unit.ua>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 12:45:54 by kosadchu          #+#    #+#             */
-/*   Updated: 2019/04/08 19:49:58 by kosadchu         ###   ########.fr       */
+/*   Updated: 2019/04/10 14:54:18 by kosadchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+typedef struct		s_gnl
+{
+	int				fd;
+	char			*st;
+	struct s_gnl	*next;
+}					t_gnl;
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
@@ -89,5 +95,6 @@ void				ft_free_array(char **c);
 int					ft_lenint(__int128_t n);
 char				*ft_itoa_bs_pf(__int128_t d, uintmax_t u, int base);
 int					ft_printf(const char *f, ...);
+int					get_next_line(const int fd, char **line);
 
 #endif

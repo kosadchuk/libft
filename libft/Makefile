@@ -80,7 +80,8 @@ SRCS :=		ft_strdup.c \
 			ft_words_num.c \
 			ft_sqrt.c \
 			ft_free_array.c \
-			ft_lenint.c
+			ft_lenint.c \
+			get_next_line.c
 
 OBJS :=		$(addprefix $(OBJDIR), $(SRCS:%.c=%.o))
 
