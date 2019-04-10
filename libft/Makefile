@@ -6,13 +6,14 @@
 #    By: kosadchu <kosadchu@student.unit.ua>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/28 17:47:49 by kosadchu          #+#    #+#              #
-#    Updated: 2019/02/15 19:15:05 by kosadchu         ###   ########.fr        #
+#    Updated: 2019/04/10 12:27:36 by kosadchu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME :=		libft.a
 OBJDIR :=	.obj/
 INCLD :=	libft.h
+PRINTOBJ :=	ft_printf/
 
 CC :=		clang
 CFLAGS :=	-Wall -Wextra -Werror
@@ -88,16 +89,23 @@ all:		$(NAME)
 
 $(NAME): 	$(OBJDIR) $(OBJS)
 	ar rc $(NAME) $(OBJS)
+	make -C $(PRINTOBJ)
 
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
 $(OBJDIR)%.o:		%.c $(INCLD)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-clean:
+mclean:
 	rm -rf $(OBJDIR)
-fclean: clean
+mfclean: mclean
 	rm -rf $(NAME)
+mre: mfclean all
+
+clean: mclean
+	make clean -C $(PRINTOBJ)
+fclean: clean mfclean
+	make fclean -C $(PRINTOBJ)
 re: fclean all
 
 .PHONY: all clean fclean re
